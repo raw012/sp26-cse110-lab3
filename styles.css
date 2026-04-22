@@ -12,8 +12,10 @@ a[href] {
 body{
     background-color: var(--background-color, white);
     color: var(--text-color);
-    font-size:10px;
+    font-size:15px;
     padding: 2%;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
 }
 header {
     background-color: #225989;
@@ -31,6 +33,8 @@ header {
 h1,h2{
     color:hsl(120,50%,50%);
     margin-left: 0.5cm;
+    text-decoration: underline;
+    font-style: italic;
 }
 nav {
     background-color: color-mix(in srgb,black 70%, white 10%);
@@ -46,6 +50,8 @@ main {
     padding-right:2cm;
     border: 2px solid #225989;
     margin: auto;
+    max-width: 1500px;
+    min-width: 300px;
 }
 p{
     color: rgba(0,0,0,0.7);
@@ -82,4 +88,55 @@ h2.section-title {
 }
 main:has(img) {
     border: 3px solid red;
+}
+img {
+    display: block;
+    margin-left: 20px;
+    position: relative;
+    top: 3px;
+}
+.hidden {
+    display: none;
+}
+.fixed-tag {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    font-size:large;
+}
+nav a:hover {
+    font-size:large
+}
+nav a:active {
+    color: rgb(61, 61, 61)
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5cm;
+    flex-wrap: wrap;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items:flex-start;
+    gap: 5px;
+    justify-items: start;
+    margin-left: 1cm;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+        padding: 1cm;
+    }
+    p {
+        margin-right: 0;
+    }
+    .fixed-tag {
+        font-size:small;
+    }
 }
