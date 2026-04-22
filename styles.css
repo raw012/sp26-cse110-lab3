@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+a[href] {
+    color: white;
+}
 :root {
     --background-color:rgb(196, 230, 219);
     --color: green;
@@ -18,13 +24,16 @@ header {
     border-color: greenyellow;
     border-width: 3px;
     border-radius: 8px;
+    & h1{
+        font-size:large;
+    }
 }
 h1,h2{
     color:hsl(120,50%,50%);
     margin-left: 0.5cm;
 }
 nav {
-    background-color: color-mix(in srgb, black 50%, white 50%);
+    background-color: color-mix(in srgb,black 70%, white 10%);
 }
 main {
     background-color: color(srgb 0.9 0.95 1);
@@ -44,4 +53,33 @@ p{
     margin-bottom: 0.01em;
     margin-right: 10cm;
     margin-left: 1cm;
+}
+
+.section-title {
+    color: green;
+}
+#Tasks {
+    color: blue;
+}
+#Concerns{
+    color: red;
+}
+
+h2 + p {
+    color:darkblue;
+}
+h1 ~ h2{
+    font-size: medium;
+}
+nav > ul {
+    color: white;
+}
+nav a {
+    font-size: small;
+}
+h2.section-title {
+    font-size: medium;
+}
+main:has(img) {
+    border: 3px solid red;
 }
