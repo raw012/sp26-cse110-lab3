@@ -12,12 +12,12 @@
     .fixed-tag {
         background-color: lightyellow;
     }
-</style>
+    </style>
 </head>
 <body>
     <div class="fixed-tag">📌 Meeting Notes</div>
     <header>
-      <h1>Pomodoro Timer First Brainstorm</h1>
+        <h1>Pomodoro Timer First Brainstorm</h1>
         <h2>meeting section</h2>
         <nav>
             <ul>
@@ -30,49 +30,134 @@
         </nav>
         <h2>2026.4.14</h2>
     </header>
-    <main>
-        <img 
-            src="clock.jpg" 
-            alt="clock"
-            width="250"
-            height="250"
-            style="opacity: 0.8;"
-        />
-        <h2 id="Check-ins" class="section-title">Check-ins</h2>
-        <ol>
-            <li><input type="checkbox" /> Tom</li>
-            <li><input type="checkbox" /> James</li>
-            <li><input type="checkbox" /> Ryan</li>
-        </ol>
-        <h2 id="Agenda" class="section-title">Agenda </h2>
-        <p>The agenda of this meeting will first review the product introduction
-            that we have done last meeting about Pomodoro Timer. Then, we will design 
-            the specific implementation of the clock. Followed by that, we will assign tasks to each one for the implementation of the clock.
-        </p>
-        <h2 id="Review_On_Last_Meeting" class="section-title">Review_On_Last_Meeting</h2>
-        <p>Last Meeting, we went over the lastest product we want to build - 
-            a Pomodoro Timer. It has the function as a normal clock while making the clock unique from other clocks with the outlook like tomato. Today, we are going to keep going and talk about the specific implementation of the clock.        
-        </p>
-        <p class="hidden">We also analyzed why Worker A is fired by the boss</p>
-        <h2 id="Tasks" class="section-title">Tasks</h2>
-        <div class="grid-container">
-            <div>Outlook Design</div>
-            <div>Mechanical Design</div>
-            <div>Clock Making</div>
-        </div>
 
-        <h2 id="Concerns" class="section-title">Concerns</h2>
-        <ol>
-            <li>How to design it to be unique from other products</li>
-            <li>What's the budget available for building the clock?</li>
-        </ol>
-        <video
-            src="clock_video.mov"
-            width="250"
-            height="250"
-        controls></video>
+    <main>
+        <img src="clock.jpg" alt="clock" width="250" height="250" style="opacity: 0.8;"/>
+
+        <!-- section + h3 -->
+        <section>
+            <h3 id="Check-ins" class="section-title">Check-ins</h3>
+            <ol>
+                <li><input type="checkbox" /> Tom</li>
+                <li><input type="checkbox" /> James</li>
+                <li><input type="checkbox" /> Ryan</li>
+            </ol>
+        </section>
+
+        <hr />
+
+        <!-- section + h3 -->
+        <section>
+            <h3 id="Agenda" class="section-title">Agenda</h3>
+            <p>The agenda of this meeting will first review the product introduction
+                that we have done last meeting about Pomodoro Timer. Then, we will design
+                the specific implementation of the clock. Followed by that, we will assign
+                tasks to each one for the implementation of the clock.
+            </p>
+        </section>
+
+        <hr />
+
+        <section>
+            <h3 id="Review_On_Last_Meeting" class="section-title">Review On Last Meeting</h3>
+            <p>Last Meeting, we went over the <strong>latest product</strong> we want to build -
+                a <em>Pomodoro Timer</em>. It has the function as a normal clock while making
+                the clock <b>unique</b> from other clocks with the outlook like tomato.
+                <i>Today</i>, we are going to keep going and talk about the specific
+                implementation of the clock.
+            </p>
+            <p class="hidden">We also analyzed why Worker A is fired by the boss</p>
+        </section>
+
+        <hr />
+
+        <section>
+            <h3 id="Tasks" class="section-title">Tasks</h3>
+            <p>We divided the task into: <span class="highlight">outlook design</span>,
+                mechanical design, and clock making.<br />
+                The deadline for design is next Monday, clock making is next Friday.
+            </p>
+            <div class="grid-container">
+                <div>Outlook Design</div>
+                <div>Mechanical Design</div>
+                <div>Clock Making</div>
+            </div>
+        </section>
+
+        <hr />
+
+        <section>
+            <h3 id="Concerns" class="section-title">Concerns</h3>
+            <ol>
+                <li>How to design it to be unique from other products</li>
+                <li>What's the budget available for building the clock?</li>
+            </ol>
+        </section>
+
+        <hr />
+
+        <section>
+            <h3>Meeting Recording</h3>
+            <audio controls>
+                <source src="Meeting recoding.m4a" type="audio/mp4">
+                The meeting Recording
+            </audio>
+        </section>
+
+        <hr />
+
+        <details>
+            <summary>Show meeting video</summary>
+            <video src="clock_video.mov" width="250" height="250" controls></video>
+        </details>
+
+        <hr />
+
+        <section>
+            <h3>Meeting Feedback</h3>
+            <form>
+                <fieldset>
+                    <legend>Your Info</legend>
+
+                    <label>Name: <input type="text" name="name" /></label><br />
+                    <label>Date: <input type="date" name="date" /></label><br />
+
+                    <label>Attendance:
+                        <input type="radio" name="attendance" value="yes" /> Yes
+                        <input type="radio" name="attendance" value="no" /> No
+                    </label><br />
+
+                    <label>Role:
+                        <select name="role">
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="manager">Manager</option>
+                        </select>
+                    </label><br />
+
+                    <label>Your suggestions:
+                        <input list="suggestions" name="suggestion" />
+                        <datalist id="suggestions">
+                            <option value="More breaks" />
+                            <option value="Shorter meeting" />
+                            <option value="Better agenda" />
+                        </datalist>
+                    </label><br />
+
+                    <label>Comments:<br />
+                        <textarea name="comments" rows="3" cols="40"></textarea>
+                    </label><br />
+
+                    <button type="submit">Submit Feedback</button>
+                </fieldset>
+            </form>
+        </section>
 
     </main>
-    
+
+    <footer>
+        <p>Meeting notes by <span>Team Pomodoro</span> &copy; 2026</p>
+    </footer>
+
 </body>
 </html>
