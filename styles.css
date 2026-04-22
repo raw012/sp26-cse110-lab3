@@ -30,7 +30,7 @@ header {
         font-size:large;
     }
 }
-h1,h2{
+h1,h2,h3{
     color:hsl(120,50%,50%);
     margin-left: 0.5cm;
     text-decoration: underline;
@@ -66,15 +66,16 @@ p{
 }
 #Tasks {
     color: blue;
+
 }
 #Concerns{
     color: red;
 }
 
-h2 + p {
+h3 + p {
     color:darkblue;
 }
-h1 ~ h2{
+h1 ~ h3{
     font-size: medium;
 }
 nav > ul {
@@ -83,7 +84,7 @@ nav > ul {
 nav a {
     font-size: small;
 }
-h2.section-title {
+h3.section-title {
     font-size: medium;
 }
 main:has(img) {
