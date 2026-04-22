@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer First Brainstorm</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+    .fixed-tag {
+        background-color: lightyellow;
+    }
+</style>
 </head>
 <body>
+    <div class="fixed-tag">📌 Meeting Notes</div>
     <header>
       <h1>Pomodoro Timer First Brainstorm</h1>
         <h2>meeting section</h2>
@@ -27,6 +36,7 @@
             alt="clock"
             width="250"
             height="250"
+            style="opacity: 0.8;"
         />
         <h2 id="Check-ins" class="section-title">Check-ins</h2>
         <ol>
@@ -43,11 +53,14 @@
         <p>Last Meeting, we went over the lastest product we want to build - 
             a Pomodoro Timer. It has the function as a normal clock while making the clock unique from other clocks with the outlook like tomato. Today, we are going to keep going and talk about the specific implementation of the clock.        
         </p>
+        <p class="hidden">We also analyzed why Worker A is fired by the boss</p>
         <h2 id="Tasks" class="section-title">Tasks</h2>
-        <p>We divided the task into outlook design, mechanical design, and clock
-           making. The deadline for the task for design part is next Monday, and 
-           the deadline for clock making is next Friday.
-        </p>
+        <div class="grid-container">
+            <div>Outlook Design</div>
+            <div>Mechanical Design</div>
+            <div>Clock Making</div>
+        </div>
+
         <h2 id="Concerns" class="section-title">Concerns</h2>
         <ol>
             <li>How to design it to be unique from other products</li>
